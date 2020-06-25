@@ -21,10 +21,10 @@ struct OnStartup {
     OnStartup() {
 #ifndef H_OS_WINDOWS
         if (signal(SIGPIPE, SIG_IGN) == SIG_ERR) {
-            LOG_ERROR << "SIGPIPE set failed.";
+            fprintf(stderr, "SIGPIPE set failed.");
             exit(-1);
         }
-        LOG_INFO << "ignore SIGPIPE";
+        fprintf(stderr, "ignore SIGPIPE");
 #endif
     }
     ~OnStartup() {
