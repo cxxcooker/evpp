@@ -67,17 +67,18 @@ if (CMAKE_BENCHMARK_TESTING)
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DH_BENCHMARK_TESTING=1")
 endif (CMAKE_BENCHMARK_TESTING)
 
+set(BOOST_ROOT /home/niuqiang/projects/speech-util/boost_1_72_0_dist/)
 include_directories(
-    /home/niuqiang/gitrepos/boost_1_72_0/install/include
-    /home/niuqiang/gitrepos/glog/install/include
-    /home/niuqiang/gitrepos/libevent-2.1.11-stable/install/include
-    /home/niuqiang/gitrepos/gflags-2.2.2/install/include
+        /home/niuqiang/projects/speech-util/boost_1_72_0_dist/include
+    /home/niuqiang/projects/speech-util/glog-master-dist/include
+    /home/niuqiang/projects/speech-util/libevent-2.1.11-dist/include
+    /home/niuqiang/projects/speech-util/gflags-2.2.2-dist/include
 )
 link_directories(
-    /home/niuqiang/gitrepos/boost_1_72_0/install/lib
-    /home/niuqiang/gitrepos/glog/install/lib
-    /home/niuqiang/gitrepos/libevent-2.1.11-stable/install/lib
-    /home/niuqiang/gitrepos/gflags-2.2.2/install/lib
+        /home/niuqiang/projects/speech-util/boost_1_72_0_dist/lib
+    /home/niuqiang/projects/speech-util/glog-master-dist/lib
+    /home/niuqiang/projects/speech-util/libevent-2.1.11-dist/lib
+    /home/niuqiang/projects/speech-util/gflags-2.2.2-dist/lib
 )
 
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
